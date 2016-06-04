@@ -5,9 +5,10 @@ marko = require 'marko'
 module.exports = (app) ->
   app.use '/', router
 
-indexTemplate = marko.load require.resolve '../views/index.marko'
+
+  router.get '/', (req, res) ->
+    indexTemplate = marko.load require.resolve '../views/index.marko'
     indexTemplate.render
       $global: locals: req.app.locals
-      title: 'Generator-Express MVC'
-      articles: articles
+      title: 'Air Quality Now for LaMetric'
     , res
