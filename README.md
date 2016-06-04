@@ -31,4 +31,8 @@ Tried running gulp
 
 Mucked with that quite a bit to get it to compile and show some stuff
 
+started reading https://docs.travis-ci.com/user/languages/javascript-with-nodejs and setup a .travis.yml, but i don't have any tests and don't even know what those would look like...
+
+switched over to herok docs at https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
+
 
