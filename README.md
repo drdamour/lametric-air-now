@@ -92,9 +92,10 @@ that wasn't it, ```heroku logs``` output
 2016-06-04T22:38:46.933316+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
 2016-06-04T22:38:47.666782+00:00 heroku[web.1]: Process exited with status 1
 2016-06-04T22:38:47.681379+00:00 heroku[web.1]: State changed from starting to crashed
-
 ```
 
+found this http://stackoverflow.com/questions/6356267/can-i-run-coffeescript-in-heroku which didn't directly answer my question, but made me just move coffee to my dependnecies out of devDependencies and that got it kinda working.
 
+The next problem was port, and i had to modify the config.coffee to have a heroku envvironment config and switch port logic to ```port: process.env.PORT || 3000```.  i fond that port via this answer http://stackoverflow.com/a/18790034/442773 which let me know PORT was an env variable.  finally i had to run ```heroku config:set NODE_ENV=heroku``` so on startup it would use my heroku config
 
 
