@@ -3,3 +3,6 @@ public/components
 .sass-cache
 
 .idea
+
+#Seems like these shouldn't be in git
+*.marko.js
