@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/drdamour/lametric-air-now.svg?branch=master)](https://travis-ci.org/drdamour/lametric-air-now)
+
 # lametric-air-now
 [Air Now](https://www.airnow.gov/) air quality reports for [LaMetric](lametric.com) using the [Air Now API](http://.airnowapi.org)
 
@@ -33,6 +35,14 @@ Mucked with that quite a bit to get it to compile and show some stuff
 
 started reading https://docs.travis-ci.com/user/languages/javascript-with-nodejs and setup a .travis.yml, but i don't have any tests and don't even know what those would look like...
 
-switched over to herok docs at https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
+switched over to heroku docs at https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
+
+Downloaded the tool belt and created a new app..but it failed
+
+stumbled upon this https://devcenter.heroku.com/articles/github-integration will need to come back to that
+
+pretty sure i failed cause of port.  Need to have a heroku mode.
+
+
 
 

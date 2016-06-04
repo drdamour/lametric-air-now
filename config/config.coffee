@@ -15,10 +15,10 @@ config =
       name: 'lametric-air-now'
     port: 3000
 
-  production:
+  heroku:
     root: rootPath
     app:
       name: 'lametric-air-now'
-    port: 3000
+    port: process.env.PORT || 3000
 
 module.exports = config[env]
