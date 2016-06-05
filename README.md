@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/drdamour/lametric-air-now.svg?branch=master)](https://travis-ci.org/drdamour/lametric-air-now)
 
 # lametric-air-now
-[Air Now](https://www.airnow.gov/) air quality reports for [LaMetric](lametric.com) using the [Air Now API](http://.airnowapi.org)
+[Air Now](https://www.airnow.gov/) air quality reports for [LaMetric](lametric.com) using the [Air Now API](http://.airnowapi.org).  Add it to your LaMetric at http://apps.lametric.com/apps/air_quality_now/439
 
 # Reason
 My wife is obsessed with the air quality reports, i tried to put this together a while back but LaMetric had not yet added config params to their UIs and the geo-ip thing seemed to tiring to attempt.
