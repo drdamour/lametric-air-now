@@ -17,4 +17,6 @@ module.exports = (app) ->
     res.json
       a : 1
       b : req.param("zip-code")
+      c : req.header("accept")
+      d : req
 
