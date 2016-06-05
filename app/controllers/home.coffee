@@ -14,6 +14,7 @@ module.exports = (app) ->
     , res
 
   router.get '/current', (req, res) ->
+    console.log req
     res.json
       frames: [
         {
