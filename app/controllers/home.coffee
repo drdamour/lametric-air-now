@@ -18,5 +18,6 @@ module.exports = (app) ->
       a : 1
       b : req.param("zip-code")
       c : req.header("accept")
-      d : req
+      d : req.headers
+      e : req.params
 
