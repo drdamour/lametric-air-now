@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/drdamour/lametric-air-now.svg?branch=master)](https://travis-ci.org/drdamour/lametric-air-now)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/907f896ca2154473b04e55fadaf09df6)](https://www.codacy.com/app/drdamour/lametric-air-now?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=drdamour/lametric-air-now&amp;utm_campaign=Badge_Grade)
 
 # lametric-air-now
 [Air Now](https://www.airnow.gov/) air quality reports for [LaMetric](lametric.com) using the [Air Now API](http://.airnowapi.org).  Add it to your LaMetric at http://apps.lametric.com/apps/air_quality_now/439
