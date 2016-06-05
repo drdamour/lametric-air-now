@@ -19,6 +19,8 @@ module.exports = (app) ->
       url: "http://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode=#{req.param("zip-code")}&date=2016-06-04&distance=25&API_KEY=#{process.env.AIR_NOW_KEY}"
       json: true
     }, (e, r, body) ->
+      console.log body
+      console.log e
       res.json
         frames: [
           {
