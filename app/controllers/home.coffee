@@ -23,7 +23,7 @@ module.exports = (app) ->
           frames: [
             {
               index: 0
-              text: "Air Quality for " + req.param("zip-code")
+              text: "Air Quality for #{body[0].ReportingArea}, #{body[0].StateCode} (#{req.param("zip-code")})"
               icon: "a2286"
             },
             {
