@@ -12,3 +12,8 @@ module.exports = (app) ->
       $global: locals: req.app.locals
       title: 'Air Quality Now for LaMetric'
     , res
+
+  router.get '/current', (req, res) ->
+    res.json
+      a : 1
+
