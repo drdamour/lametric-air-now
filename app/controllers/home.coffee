@@ -3,7 +3,7 @@ router = express.Router()
 marko = require 'marko'
 request = require("request")
 
-yellowBallIcon = "i120"
+yellowBallIcon = "i607"
 greenBallIcon = "i606"
 redBallIcon = "i605"
 skullIcon = "i148"
