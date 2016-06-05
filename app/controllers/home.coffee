@@ -16,16 +16,19 @@ module.exports = (app) ->
   router.get '/current', (req, res) ->
     res.json
       frames: [
-        index: 0
-        text:  req.param("zip-code")
-        icon: "i120"
-        ,
-        index: 1
-        text:  req.param("zip-code")
-        icon: "i120"
-        ,
-        c : req.header("accept")
-        d : req.headers
-        e : req.params
+        {
+          index: 0
+          text: req.param("zip-code")
+          icon: "i120"
+        },
+        {
+          index: 1
+          text:  req.param("zip-code")
+          icon: "i120"
+
+          c: req.header("accept")
+          d: req.headers
+          e: req.params
+        }
       ]
 
