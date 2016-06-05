@@ -16,4 +16,5 @@ module.exports = (app) ->
   router.get '/current', (req, res) ->
     res.json
       a : 1
+      b : req.param("zip-code")
 
