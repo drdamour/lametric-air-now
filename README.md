@@ -1,7 +1,9 @@
 [![Build Status](https://img.shields.io/travis/drdamour/lametric-air-now.svg)](https://travis-ci.org/drdamour/lametric-air-now)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/907f896ca2154473b04e55fadaf09df6)](https://www.codacy.com/app/drdamour/lametric-air-now?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=drdamour/lametric-air-now&amp;utm_campaign=Badge_Grade)
-[![GitHub issues](https://img.shields.io/github/issues/drdamour/lametric-air-now.svg?maxAge=2592000)]()
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)]()
+[![GitHub issues](https://img.shields.io/github/issues/drdamour/lametric-air-now.svg?maxAge=3600)]()
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=3600)]()
+[![David](https://img.shields.io/david/drdamour/lametric-air-now.svg?maxAge=3600)](https://david-dm.org/drdamour/lametric-air-now)
+[![David](https://img.shields.io/david/dev/drdamour/lametric-air-now.svg?maxAge=3600)](https://david-dm.org/drdamour/lametric-air-now#info=devDependencies)
 
 # lametric-air-now
 [Air Now](https://www.airnow.gov/) air quality reports for [LaMetric](lametric.com) using the [Air Now API](http://.airnowapi.org).  Add it to your LaMetric at http://apps.lametric.com/apps/air_quality_now/439
