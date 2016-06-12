@@ -76,8 +76,8 @@ module.exports = (app) ->
             ]
         else
           now = current[0]
-          expectedToday = (f for f in forecast when f?.ParameterName is 'O3' and f?.DateForecast.trim() is today)[0]
-          expectedTomorrow = (f for f in forecast when f?.ParameterName is 'O3' and f?.DateForecast.trim() is tomorrow)[0]
+          expectedToday = (f for f in forecast when f?.ParameterName in ['O3','pm2.5'] and f?.DateForecast.trim() is today)[0]
+          expectedTomorrow = (f for f in forecast when f?.ParameterName in ['O3','pm2.5'] and f?.DateForecast.trim() is tomorrow)[0]
 
           res.json
             frames: [
@@ -88,17 +88,17 @@ module.exports = (app) ->
               },
               {
                 index: 1
-                text: "Current AQI #{now.AQI} (#{now?.Category?.Name}) today"
+                text: "Current AQI #{now.AQI} (#{now?.Category?.Name}) today (#{now.ParameterName})"
                 icon: levelIcons[now?.Category?.Name || "Unavailable"]
               },
               {
                 index: 2
-                text: "AQI #{expectedToday.AQI} (#{expectedToday?.Category?.Name}) expected today"
+                text: "AQI #{expectedToday.AQI} (#{expectedToday?.Category?.Name}) expected today (#{expectedToday.ParameterName})"
                 icon: levelIcons[expectedToday?.Category?.Name || "Unavailable"]
               },
               {
                 index: 3
-                text: "AQI #{expectedTomorrow?.AQI} (#{expectedTomorrow?.Category?.Name}) expected tomorrow"
+                text: "AQI #{expectedTomorrow?.AQI} (#{expectedTomorrow?.Category?.Name}) expected tomorrow (#{expectedTomorrow.ParameterName})"
                 icon: levelIcons[faqiForcastTomorrow?.Category?.Name || "Unavailable"]
               },
             ]
