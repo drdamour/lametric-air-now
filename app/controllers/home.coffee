@@ -76,8 +76,8 @@ module.exports = (app) ->
             ]
         else
           now = current[0]
-          expectedToday = (f for f in forecast when f?.ParameterName in ['O3','pm2.5'] and f?.DateForecast.trim() is today)[0]
-          expectedTomorrow = (f for f in forecast when f?.ParameterName in ['O3','pm2.5'] and f?.DateForecast.trim() is tomorrow)[0]
+          expectedToday = (f for f in forecast when f?.ParameterName in ['O3','PM2.5'] and f?.DateForecast.trim() is today)[0]
+          expectedTomorrow = (f for f in forecast when f?.ParameterName in ['O3','PM2.5'] and f?.DateForecast.trim() is tomorrow)[0]
 
           res.json
             frames: [
