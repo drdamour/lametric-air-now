@@ -79,27 +79,36 @@ module.exports = (app) ->
           expectedToday = (f for f in forecast when f?.ParameterName in ['O3','PM2.5'] and f?.DateForecast.trim() is today)[0]
           expectedTomorrow = (f for f in forecast when f?.ParameterName in ['O3','PM2.5'] and f?.DateForecast.trim() is tomorrow)[0]
 
+          frames = [
+            {
+              index: 0
+              text: "Air Quality for #{zip} (#{expectedToday?.ReportingArea}, #{expectedToday?.StateCode})"
+              icon: cloudsIcon
+            }
+          ]
+
+          if now
+            frames.push {
+              index: 1
+              text: "Current AQI #{now.AQI} (#{now?.Category?.Name}) today (#{now.ParameterName})"
+              icon: levelIcons[now?.Category?.Name || "Unavailable"]
+            }
+
+          if expectedToday
+            frames.push {
+              index: 2
+              text: "AQI #{expectedToday.AQI} (#{expectedToday?.Category?.Name}) expected today (#{expectedToday.ParameterName})"
+              icon: levelIcons[expectedToday?.Category?.Name || "Unavailable"]
+            }
+
+          if expectedTomorrow
+            frames.push {
+              index: 3
+              text: "AQI #{expectedTomorrow?.AQI} (#{expectedTomorrow?.Category?.Name}) expected tomorrow (#{expectedTomorrow.ParameterName})"
+              icon: levelIcons[faqiForcastTomorrow?.Category?.Name || "Unavailable"]
+            }
+          
+
           res.json
-            frames: [
-              {
-                index: 0
-                text: "Air Quality for #{expectedToday.ReportingArea}, #{expectedToday.StateCode} (#{zip})"
-                icon: cloudsIcon
-              },
-              {
-                index: 1
-                text: "Current AQI #{now.AQI} (#{now?.Category?.Name}) today (#{now.ParameterName})"
-                icon: levelIcons[now?.Category?.Name || "Unavailable"]
-              },
-              {
-                index: 2
-                text: "AQI #{expectedToday.AQI} (#{expectedToday?.Category?.Name}) expected today (#{expectedToday.ParameterName})"
-                icon: levelIcons[expectedToday?.Category?.Name || "Unavailable"]
-              },
-              {
-                index: 3
-                text: "AQI #{expectedTomorrow?.AQI} (#{expectedTomorrow?.Category?.Name}) expected tomorrow (#{expectedTomorrow.ParameterName})"
-                icon: levelIcons[faqiForcastTomorrow?.Category?.Name || "Unavailable"]
-              },
-            ]
+            frames: frames
 
